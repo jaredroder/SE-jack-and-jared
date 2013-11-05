@@ -1,0 +1,99 @@
+
+http://softwaredisastersblog.com/
+5 Lessons from Healthcare.gov Software Disaster of the Century
+Posted on October 30, 2013 by Kit Merker
+Healthcare.gov
+Healthcare.gov (Photo credit: jurno)
+
+The most visible software disaster I’ve ever seen is the Healthcare.gov problems that have received unprecedented media coverage and raised concerns both technical and political.
+
+There is plenty of coverage of the saga so I won’t bother to repost or comment on all that is happening.  But instead will attempt to extract some lessons that can be applied to software 
+projects in general.
+
+1. Too Many Cooks
+
+The healthcare.gov website was built by 55 different vendors, and was overseen by the federal government itself.  According to testimony to congress, there was no single vendor that was 
+responsible for the overall delivery and quality of the application.  None of the people building the various components features were accountable for overall quality.
+
+The complexity of even simple software systems is relative not only to the number of lines of code, but also by the number of individual players involved.  The lesson here is if everyone 
+is in charge, NO ONE is in charge.  When considering outsourcing a project, make sure that you know who’s “throat you can choke” if there are delivery and risk problems, because 
+otherwise you will be left holding  the bag.
+
+2. Big Bang Completion
+
+What is referred to as “integration cost/risk” has to be paid at some point in the software project lifecycle.  As you bring components together from individual developers or teams, they 
+won’t quite fit.  There will be special cases that aren’t handled properly, API calls that drifted from spec to implementation, and unexpected resource contention that will lead to 
+performance problems. The trick is to take that integration cost incrementally throughout the project.  Ideally your teams will lock on the integration interfaces early, and then complete 
+implementation in a continuous cycle.  It’s also a great idea to prioritize a couple end-to-end scenarios and complete them first so that you can see all the pieces working together as 
+early as possible.
+
+If you wait until the end, you will likely spend more time correcting more code because it is built upon poor assumptions.  Think of it this way: It’s cheaper to move a wall on a 
+blue-print than once the drywall & electrical is in place.
+
+3. Testing? What Testing?
+
+It appears on this project (as in so many others) that end-to-end testing was left to the end and the results of the testing were ignored.  The industry best practice (although rarely 
+followed) is to test first.  In fact, Test Driven Development says that you should define and write automated tests that express what you expect first, and then code away at the product 
+until the tests pass.  It’s easy to underestimate the cost (and the value!) of building a comprehensive automated test suite.  Don’t make the same mistake.  Think of your specification in 
+terms of tests that pass/fail and you will be able to measure the progress and quality of your application throughout the project.
+
+4. Lack of Trust – Raising Concerns
+
+An interesting line of questioning from the healthcare.gov hearings related to if any of the teams raised concerns.  In a multi-million dollar government project with dozens of teams, 
+presumably lots of red tape, and no clear leader that no one raised the alarm bells.  Don’t think that your software team is immune from this!  Under pressure to ship software for a 
+customer or looming launch date, teams may get weary and become short sited in their thinking.  “We’ll fix it in the service pack” is an easy excuse.  As a software team leader, if you 
+want to know what’s really going on, you need to make bad news not only OK, but actively seek it out.  Make sure that raising risks and concerns are rewarded.  Don’t play the blame game, 
+but rather look at how the team can make data-driven project management decisions to adjust scope, timelines, and resources for a successful launch.
+
+5. Handling a Crisis
+
+Be honest.  Be clear of the technical difficulties. Tell people what you’re doing about it.  Vagueness does not build confidence. Your boss or customer may not understand all the technical 
+details, but they will recognize that building, scaling, and running technical systems is complicated. Everyone will want an ETA for a fix.  This is the hardest question to handle.  The 
+best way I’ve seen this handled is to provide a schedule for when you will give updates on progress, and stick to that religiously.  Also providing stats on the current number of issues 
+being worked and what stage those are in helps build confidence as that trends in the right direction.  There are many other nuances to handling the PR when you find yourself in this 
+situation but the core principles are simple.
+
+Bonus Lesson – Too Little, Too Late
+
+Adding more people to a huge project is probably not the right solution.  If you set your team up with clear ownership, trust to raise issues, and iterative integration, you probably just 
+need more time.  If you need more expertise, bring in the best talent you can and give them full reign with access to the code, people, and documentation you have and let them work their 
+magic.  You also want to tightly triage the problems you fix to avoid the unintended consequences associated with additional “churn” in the product code.  Also look at what problems can be 
+temporarily fixed with manual reports, processes, or support teams.  Depending on the scope of your project, this may be better for you business in the long run as you build confidence with 
+customers and users.
+
+Conclusion
+
+Building highly scalable, easy to use, helpful software is never easy.  You can increase your chances for success by ensuring clear ownership, integrating & testing early, building trust in 
+your team. And if you find yourself in crisis mode, you have to get up at your “rose garden” and explain clearly what happened and what you’re doing about it. Don’t expect throwing more 
+people & money at the problem to fix it, but sometimes external high-quality help is the only thing that can bring your project back on track. Most importantly, stay positive and focus on 
+making progress on the most important problems.
+
+Take a deep breath and remember that at least you aren’t working on the software disaster of the century!
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+http://nymag.com/daily/intelligencer/2013/10/healthcaregov-didnt-work-launched-anyway.html?mid=twitter_nymag
+Healthcare.gov Didn’t Work in Tests, Launched Anyway
+By Margaret Hartmann
+
+WASHINGTON, DC - OCTOBER 01:  U.S. President Barack Obama delivers remarks about the launch of the Affordable Care Act's health insurance marketplaces and the first federal government shutdown 
+in 17 years in the Rose Garden of the White House October 1, 2013 in Washington, DC. House Republicans and Senate Democrats continue to volley legislation back and forth as they battle over a 
+budget to keep the government running and delaying or defunding "Obamacare." Federal officials have expressed dismay about the Healthcare.gov fiasco, but they shouldn't be so shocked that the 
+website doesn't work. While Health and Human Services Secretary Kathleen Sebelius admitted last week, "We didn't have enough testing, specifically for high volumes, for a very complicated 
+project," the tests they did get a chance to run suggested the site wasn't ready for prime time. The Washington Post reports that days before the site was set to go live on October 1, officials 
+ran a test to see if a key part of the site could handle tens of thousands of users at once. It crashed after only a few hundred people logged on, but the launch continued as scheduled. 
+Predictably, when about 2,000 people tried to complete the website's first step at midnight, the site froze.
+
+In another test, The Centers for Medicare and Medicaid Services, the agency tasked with running the federal exchange, asked roughly ten insurers to check out the site and offer suggestions. 
+About a month before site went live, the test group said the problems were so serious that the launch should be delayed. Those working on the site knew that wasn't an option, so they kept 
+working and hoped all the pieces would come together in time. Per the Post:
+
+	Some key testing of the system did not take place until the week before launch, according to this person. As late as Sept. 26, there had been no tests to determine whether a consumer could 
+	complete the process from beginning to end: create an account, determine eligibility for federal subsidies and sign up for a health insurance plan, according to two sources familiar with the project.
+	
+Of course, we now know their metaphoric all-nighter didn't produce an "A" paper in the end. Some of the last-minute decisions led to the site's biggest problems. According to The Wall Street 
+Journal, CGI Federal, one of the main contractors, told congressional investigators that the Obama administration decided to require users to register for an account before browsing for insurance 
+plans. Thus, the fragile site was even more overloaded by new accounts from people who have health insurance but just wanted to check out Obamacare.
+
+
+An option to "see plans now" without registering has already been added, but it's unclear if that has anything to do with the "tech surge" promised by the White House. Officials were vague about who's on the team cleaning up HealthCare.gov, and two sources told The Journal on Monday that no new experts have arrived at their sites to start cleaning up the mess.
